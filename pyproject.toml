@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "notional-revelation"
+version = "0.1.0"
+description = ""
+authors = ["Hugo <hugo.evers@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+revelation = "^2.0.0"
+notional = "^0.0.7"
+Jinja2 = "^3.0.2"
+notion-client = "^0.7.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+nbdev = "^1.1.22"
+pre-commit = "^2.15.0"
+black = "^21.9b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+virtualenvs.in-project = true
