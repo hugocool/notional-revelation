@@ -8,10 +8,12 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.8"
 revelation = "^2.0.0"
-notional = "^0.0.7"
 notion-client = "^0.7.1"
 renderdown = "^0.2.0"
 python-dotenv = "^0.19.1"
+pydantic = {git = "https://github.com/PrettyWood/pydantic.git", rev = "field-property"}
+notional = "^0.0.7"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

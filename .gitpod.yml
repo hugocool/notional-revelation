@@ -5,5 +5,5 @@ image:
 
 tasks:
   - before: "echo 'export PIP_USER=no' >> ~/.bashrc && export PIP_USER=no"
-  - init: poetry env use python && poetry install
+  - init: poetry config virtualenvs.create true && poetry config virtualenvs.in-project true && poetry env use python && poetry install
 
