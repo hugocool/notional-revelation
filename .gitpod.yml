@@ -4,6 +4,6 @@ image:
 
 
 tasks:
-- init: |
-    poetry env use python && poetry install
+  - before: "echo 'export PIP_USER=no' >> ~/.bashrc && export PIP_USER=no"
+  - init: poetry env use python && poetry install
 

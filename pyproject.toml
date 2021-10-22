@@ -9,8 +9,9 @@ license = "MIT"
 python = "^3.8"
 revelation = "^2.0.0"
 notional = "^0.0.7"
-Jinja2 = "^3.0.2"
 notion-client = "^0.7.1"
+renderdown = "^0.2.0"
+python-dotenv = "^0.19.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -21,4 +22,4 @@ black = "^21.9b0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-virtualenvs.in-project = true
+

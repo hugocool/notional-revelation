@@ -1,20 +1,18 @@
 FROM python:3.9.1-buster
-RUN apt-get update && apt-get -y install locales
-# RUN apt-get update --fix-missing&& \
-#     apt-get upgrade -y  && \
-#     apt-get install -y git
 
-RUN locale-gen nl_NL.UTF-8
+RUN apt-get update --fix-missing&& \
+    apt-get upgrade -y  
+
 
 # https://stackoverflow.com/questions/53835198/integrating-python-poetry-with-docker
-# ARG MY_ENV= Production how and when should this be set?
+ARG ENV = dev
 
 ENV PORT=8080
 EXPOSE ${PORT}
 
 
 ENV PYTHONIOENCODING=UTF-8
-ENV YOUR_ENV=${YOUR_ENV} \
+ENV ENV=${ENV} \
     PYTHONFAULTHANDLER=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=random \
@@ -40,7 +38,7 @@ USER appuser
 ENV PATH "${HOME}/.poetry/bin:${PATH}"
 # Project initialization:
 RUN poetry config virtualenvs.create false \
-  && poetry install $(test "$YOUR_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
+  && poetry install $(test "$ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 # CMD ["python", "main.py"]
