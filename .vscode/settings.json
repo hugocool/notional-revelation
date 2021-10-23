@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/gitpod/.cache/pypoetry/virtualenvs/notional-revelation-CV-kUeSA-py3.8/bin/python",
+    "python.pythonPath": ".venv/bin/python",
     "jupyter.notebookFileRoot": "${workspaceFolder}"
 }
