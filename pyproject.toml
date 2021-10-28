@@ -13,6 +13,7 @@ renderdown = "^0.2.0"
 python-dotenv = "^0.19.1"
 pydantic = {git = "https://github.com/PrettyWood/pydantic.git", rev = "field-property"}
 notional = "^0.0.7"
+deveal = "^1.3.0"
 
 
 [tool.poetry.dev-dependencies]
