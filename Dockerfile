@@ -5,14 +5,14 @@ RUN apt-get update --fix-missing&& \
 
 
 # https://stackoverflow.com/questions/53835198/integrating-python-poetry-with-docker
-ARG ENV = dev
+ARG MY_ENV=dev
 
 ENV PORT=8080
 EXPOSE ${PORT}
 
 
 ENV PYTHONIOENCODING=UTF-8
-ENV ENV=${ENV} \
+ENV MY_ENV=${MY_ENV} \
     PYTHONFAULTHANDLER=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=random \
